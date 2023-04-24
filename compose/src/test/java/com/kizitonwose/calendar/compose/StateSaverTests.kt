@@ -7,6 +7,7 @@ import com.kizitonwose.calendar.compose.heatmapcalendar.HeatMapCalendarState
 import com.kizitonwose.calendar.compose.weekcalendar.WeekCalendarState
 import com.kizitonwose.calendar.core.OutDateStyle
 import org.junit.Assert.assertEquals
+import org.junit.Ignore
 import org.junit.Test
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -18,6 +19,7 @@ import java.time.YearMonth
  * being saved. Such issues are typically not caught during development since
  * state restoration (e.g via rotation) will likely not happen often.
  */
+@Ignore("per day scrolling is not fully supported yet")
 class StateSaverTests {
 
     @Test

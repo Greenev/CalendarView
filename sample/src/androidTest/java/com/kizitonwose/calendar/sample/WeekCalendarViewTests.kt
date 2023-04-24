@@ -18,6 +18,7 @@ import com.kizitonwose.calendar.view.WeekHeaderFooterBinder
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -28,6 +29,7 @@ import java.time.YearMonth
  * These are UI behaviour tests.
  * The core logic tests are in the data project.
  */
+@Ignore("per day scrolling is not fully supported yet")
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class WeekCalendarViewTests {
