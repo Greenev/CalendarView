@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.kizitonwose.calendar.core.WeekDay
 import com.kizitonwose.calendar.core.atStartOfMonth
@@ -22,7 +21,6 @@ import com.kizitonwose.calendar.sample.shared.displayText
 import com.kizitonwose.calendar.sample.shared.getWeekPageTitle
 import com.kizitonwose.calendar.view.ViewContainer
 import com.kizitonwose.calendar.view.WeekDayBinder
-import java.time.Instant
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
@@ -61,7 +59,6 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
 
             fun bind(day: WeekDay) {
                 this.day = day
-                println("DayViewContainer bind: " + day.date)
                 bind.exSevenDateText.text = dateFormatter.format(day.date)
                 bind.exSevenDayText.text = day.date.dayOfWeek.displayText()
 
@@ -72,7 +69,6 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
                 }
                 bind.exSevenDateText.setTextColor(view.context.getColorCompat(colorRes))
                 bind.exSevenSelectedView.isVisible = day.date == selectedDate
-                println("DayViewContainer bind over: " + day.date)
             }
         }
 
@@ -85,7 +81,7 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
                         Toast.makeText(context, "Date selected: $selected", Toast.LENGTH_LONG).show()
                     }
                 }
-            }
+            },
         )
 
         binding.exSevenCalendar.dayBinder = object : WeekDayBinder<DayViewContainer> {
@@ -94,6 +90,7 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
                     val dm = DisplayMetrics()
                     val wm =
                         requireContext().getSystemService(Context.WINDOW_SERVICE) as WindowManager
+                    @Suppress("DEPRECATION")
                     wm.defaultDisplay.getMetrics(dm)
                     val dayWidth = dm.widthPixels / 5
                     val dayHeight = (dayWidth * 1.25).toInt()
