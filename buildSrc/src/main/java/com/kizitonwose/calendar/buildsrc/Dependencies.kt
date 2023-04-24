@@ -26,7 +26,7 @@ object Plugins {
     const val kotlin = Kotlin.gradlePlugin
     const val kotlinter = "org.jmailen.gradle:kotlinter-gradle:3.14.0"
     const val versions = "com.github.ben-manes:gradle-versions-plugin:0.46.0"
-    const val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.25.1"
+    const val mavenPublish = "com.vanniktech:gradle-maven-publish-plugin:0.25.2"
 }
 
 object Kotlin {
