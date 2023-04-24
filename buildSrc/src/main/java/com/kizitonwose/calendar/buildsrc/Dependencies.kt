@@ -22,7 +22,7 @@ object Android {
 }
 
 object Plugins {
-    const val android = "com.android.tools.build:gradle:7.4.2"
+    const val android = "com.android.tools.build:gradle:7.5"
     const val kotlin = Kotlin.gradlePlugin
     const val kotlinter = "org.jmailen.gradle:kotlinter-gradle:3.14.0"
     const val versions = "com.github.ben-manes:gradle-versions-plugin:0.46.0"
