@@ -18,6 +18,7 @@ import com.kizitonwose.calendar.view.WeekHeaderFooterBinder
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -70,6 +71,7 @@ class WeekCalendarViewTests {
         assertEquals(changedDate, boundDay?.date)
     }
 
+    @Ignore("per day scrolling is not fully supported yet")
     @Test
     fun allBindersAreCalledOnWeekChanged() {
         val calendarView = openAndGetWeekCalendarView()

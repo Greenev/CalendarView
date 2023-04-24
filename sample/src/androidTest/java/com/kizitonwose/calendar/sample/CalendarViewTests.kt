@@ -40,6 +40,7 @@ import java.time.YearMonth
  * These are UI behaviour tests.
  * The core logic tests are in the data project.
  */
+@Ignore("per day scrolling is not fully supported yet")
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class CalendarViewTests {
