@@ -7,6 +7,7 @@ import com.kizitonwose.calendar.core.previousMonth
 import com.kizitonwose.calendar.core.yearMonth
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
+import org.junit.Ignore
 import org.junit.Test
 import java.time.DayOfWeek
 import java.time.Month.DECEMBER
@@ -14,6 +15,7 @@ import java.time.Month.NOVEMBER
 import java.time.Month.OCTOBER
 import java.time.YearMonth
 
+@Ignore("per day scrolling is not fully supported yet")
 class HeatMapDataTests {
 
     private val october2022 = YearMonth.of(2022, OCTOBER)

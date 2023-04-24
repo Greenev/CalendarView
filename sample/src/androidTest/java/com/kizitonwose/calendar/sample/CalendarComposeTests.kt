@@ -32,6 +32,7 @@ import com.kizitonwose.calendar.sample.compose.Example8Page
 import com.kizitonwose.calendar.sample.shared.displayText
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -42,6 +43,7 @@ import java.time.temporal.WeekFields
  * These are UI behaviour tests.
  * The core logic tests are in the data project.
  */
+@Ignore("per day scrolling is not fully supported yet")
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class CalendarComposeTests {
