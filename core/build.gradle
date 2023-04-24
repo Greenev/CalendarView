@@ -1,5 +1,4 @@
 import com.kizitonwose.calendar.buildsrc.Android
-import com.kizitonwose.calendar.buildsrc.Config
 import com.kizitonwose.calendar.buildsrc.Libs
 
 apply plugin: 'com.android.library'
@@ -16,11 +15,11 @@ android {
     }
     compileOptions {
         coreLibraryDesugaringEnabled true
-        sourceCompatibility = Config.compatibleJavaVersion
-        targetCompatibility = Config.compatibleJavaVersion
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = Config.compatibleJavaVersion
+        jvmTarget = JavaVersion.VERSION_11
     }
 }
 
